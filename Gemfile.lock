@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sightengine_ruby (0.1.0)
+    sightengine-rb (0.1.0)
       anyway_config (~> 2.4)
       httparty (~> 0.21)
 
@@ -62,7 +62,7 @@ PLATFORMS
 DEPENDENCIES
   irb
   rake (~> 13.0)
-  sightengine_ruby!
+  sightengine-rb!
   webmock (~> 3.18)
 
 BUNDLED WITH
