@@ -14,7 +14,12 @@ module SightengineRuby
       end
 
       def post(path, params = {})
-        self.class.post(path, query: params.merge(api_user: @api_user, api_secret: @api_secret))
+        if params[:file]
+          params[:media] = params.delete(:file)
+          self.class.post(path, body: params.merge(api_user: @api_user, api_secret: @api_secret))
+        else
+          self.class.post(path, query: params.merge(api_user: @api_user, api_secret: @api_secret))
+        end
       end
     end
   end

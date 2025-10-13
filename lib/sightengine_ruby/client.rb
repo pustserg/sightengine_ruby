@@ -13,12 +13,12 @@ module SightengineRuby
       @api_secret = SightengineRuby.config.api_secret
     end
 
-    def check(models, image_url)
-      CheckRequest.new(api_user, api_secret).post(models, image_url)
+    def check(models, image_url: nil, file: nil)
+      CheckRequest.new(api_user, api_secret).post(models, image_url: image_url, file: file)
     end
 
-    def set_celebrity(celebrity_id, image_url)
-      SetCelebrityRequest.new(api_user, api_secret).post(celebrity_id, image_url)
+    def set_celebrity(celebrity_id, image_url: nil, file: nil)
+      SetCelebrityRequest.new(api_user, api_secret).post(celebrity_id, image_url: image_url, file: file)
     end
   end
 end
