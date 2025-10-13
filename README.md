@@ -38,7 +38,11 @@ client = SightengineRuby::Client.new
 And make requests to the API. For example, to check an image for nudity:
 
 ```ruby
-response = client.check('nudity', 'https://example.com/image.jpg')
+# Check a remote image
+response = client.check('nudity', image_url: 'https://example.com/image.jpg')
+
+# Check a local image
+response = client.check('nudity', file: 'path/to/image.jpg')
 ```
 
 ## Development
