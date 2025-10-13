@@ -2,7 +2,7 @@
 
 require "httparty"
 
-module SightengineRuby
+module SightengineRb
   class Client
     class BaseRequest
       include HTTParty

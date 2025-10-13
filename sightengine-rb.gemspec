@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/sightengine_ruby/version"
+require_relative "lib/sightengine-rb/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "sightengine_ruby"
-  spec.version = SightengineRuby::VERSION
+  spec.name = "sightengine-rb"
+  spec.version = SightengineRb::VERSION
   spec.authors = ["Sergey Pustovalov"]
   spec.email = ["sergey@pustovalov.me"]
 

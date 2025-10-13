@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SightengineRuby
+module SightengineRb
   class Client
     class CheckRequest < BaseRequest
       def post(models, image_url: nil, file: nil)

@@ -2,7 +2,7 @@
 
 require "anyway_config"
 
-module SightengineRuby
+module SightengineRb
   class Config < Anyway::Config
     config_name :sightengine
     attr_config :api_user, :api_secret

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "sightengine_ruby/version"
-require_relative "sightengine_ruby/client"
-require_relative "sightengine_ruby/config"
+require_relative "sightengine-rb/version"
+require_relative "sightengine-rb/client"
+require_relative "sightengine-rb/config"
 
-module SightengineRuby
+module SightengineRb
   class << self
     def config
       @config ||= Config.new

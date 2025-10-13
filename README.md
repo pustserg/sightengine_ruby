@@ -1,4 +1,4 @@
-# SightengineRuby
+# SightengineRb
 
 This gem provides a convenient way to interact with the [Sightengine API](https://sightengine.com/) for content moderation.
 
@@ -7,7 +7,7 @@ This gem provides a convenient way to interact with the [Sightengine API](https:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'sightengine_ruby'
+gem 'sightengine-rb'
 ```
 
 And then execute:
@@ -16,14 +16,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install sightengine_ruby
+    $ gem install sightengine-rb
 
 ## Usage
 
 First, configure the client with your API user and secret. You can do this in an initializer file (e.g., `config/initializers/sightengine.rb`):
 
 ```ruby
-SightengineRuby.configure do |config|
+SightengineRb.configure do |config|
   config.api_user = 'YOUR_API_USER'
   config.api_secret = 'YOUR_API_SECRET'
 end
@@ -32,7 +32,7 @@ end
 Then, you can create a client instance:
 
 ```ruby
-client = SightengineRuby::Client.new
+client = SightengineRb::Client.new
 ```
 
 And make requests to the API. For example, to check an image for nudity:

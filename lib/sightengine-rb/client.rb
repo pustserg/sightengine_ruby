@@ -4,13 +4,13 @@ require_relative "client/base_request"
 require_relative "client/check_request"
 require_relative "client/set_celebrity_request"
 
-module SightengineRuby
+module SightengineRb
   class Client
     attr_reader :api_user, :api_secret
 
     def initialize
-      @api_user = SightengineRuby.config.api_user
-      @api_secret = SightengineRuby.config.api_secret
+      @api_user = SightengineRb.config.api_user
+      @api_secret = SightengineRb.config.api_secret
     end
 
     def check(models, image_url: nil, file: nil)
