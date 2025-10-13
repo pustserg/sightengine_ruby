@@ -8,9 +8,9 @@ module SightengineRuby
   class Client
     attr_reader :api_user, :api_secret
 
-    def initialize(api_user, api_secret)
-      @api_user = api_user
-      @api_secret = api_secret
+    def initialize
+      @api_user = SightengineRuby.config.api_user
+      @api_secret = SightengineRuby.config.api_secret
     end
 
     def check(models, image_url)
