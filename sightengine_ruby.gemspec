@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "A Ruby wrapper for the Sightengine API."
   spec.description = "This gem provides a convenient way to interact with the Sightengine API for content moderation."
   spec.homepage = "https://github.com/pustserg/sightengine_ruby"
+  spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
