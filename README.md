@@ -20,13 +20,22 @@ Or install it yourself as:
 
 ## Usage
 
-First, configure the client with your API user and secret:
+First, configure the client with your API user and secret. You can do this in an initializer file (e.g., `config/initializers/sightengine.rb`):
 
 ```ruby
-client = SightengineRuby::Client.new('YOUR_API_USER', 'YOUR_API_SECRET')
+SightengineRuby.configure do |config|
+  config.api_user = 'YOUR_API_USER'
+  config.api_secret = 'YOUR_API_SECRET'
+end
 ```
 
-Then, you can make requests to the API. For example, to check an image for nudity:
+Then, you can create a client instance:
+
+```ruby
+client = SightengineRuby::Client.new
+```
+
+And make requests to the API. For example, to check an image for nudity:
 
 ```ruby
 response = client.check('nudity', 'https://example.com/image.jpg')
