@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    sightengine-rb (0.1.0)
+    sightengine-rb (0.1.1)
       anyway_config (~> 2.4)
-      httparty (~> 0.18.1)
+      httparty (>= 0.18.1)
 
 GEM
   remote: https://rubygems.org/
