@@ -18,7 +18,7 @@ module SightengineRb
           params[:media] = params.delete(:file)
           self.class.post(path, body: params.merge(api_user: @api_user, api_secret: @api_secret))
         else
-          self.class.post(path, query: params.merge(api_user: @api_user, api_secret: @api_secret))
+          self.class.post(path, body: params.merge(api_user: @api_user, api_secret: @api_secret), headers: { "Content-Type" => "application/x-www-form-urlencoded" })
         end
       end
     end
