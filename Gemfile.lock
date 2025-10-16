@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sightengine-rb (0.1.2)
+    sightengine-rb (0.1.3)
       anyway_config (~> 2.4)
       httparty (>= 0.18.0)
 
