@@ -45,6 +45,37 @@ response = client.check('nudity', image_url: 'https://example.com/image.jpg')
 response = client.check('nudity', file: 'path/to/image.jpg')
 ```
 
+### Text Moderation
+
+You can moderate text content using rule-based detection:
+
+```ruby
+# Basic text check with default categories
+response = client.check_text('Some text to moderate', lang: 'en')
+
+# Check with specific categories
+response = client.check_text(
+  'Some text to moderate',
+  lang: 'en',
+  categories: %w[profanity personal link drug weapon]
+)
+
+# Check with multiple languages
+response = client.check_text('Text to check', lang: 'en,fr,es')
+
+# Check with phone number country detection
+response = client.check_text(
+  'Call me at 555-1234',
+  lang: 'en',
+  opt_countries: %w[US CA]
+)
+
+# Check with custom blacklist
+response = client.check_text('Text to check', lang: 'en', list_id: 'your-list-id')
+```
+
+Available categories: `profanity`, `personal`, `link`, `drug`, `weapon`, `spam`, `content-trade`, `money-transaction`, `extremism`, `violence`, `self-harm`, `medical`.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
